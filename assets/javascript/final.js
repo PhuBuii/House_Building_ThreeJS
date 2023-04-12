@@ -15,6 +15,8 @@ var flavourColour = new THREE.Color(0xc22c47);
 let autopilot;
 let gameEnded;
 let robotPrecision; // Determines how precise the game is on autopilot
+let s, l, h;
+
 
 const scoreElement = document.getElementById("score");
 const instructionsElement = document.getElementById("instructions");
@@ -92,6 +94,9 @@ function init() {
 }
 
 function startGame() {
+  s = Math.floor(Math.random() * 50) + 25;
+  l = Math.floor(Math.random() * 50) + 30;
+  h = Math.floor(Math.random() * 100) + 1;
   autopilot = false;
   gameEnded = false;
   lastTime = 0;
@@ -142,10 +147,13 @@ function addOverhang(x, z, width, depth) {
   const overhang = generateBox(x, y, z, width, depth, true);
   overhangs.push(overhang);
 }
+
+
 function cake(x, y, z, width, depth) {
   // ThreeJS
-  // const geometry = new THREE.BoxGeometry(width, boxHeight, depth);
-  const color = new THREE.Color(`hsl(${0 + stack.length * 4}, 50%, 50%)`);
+  // const geometry = new THREE.BoxGeometry(width, boxHeight, depth);  
+  console.log(s);
+  const color = new THREE.Color(`hsl(${h + stack.length * 20}, ${s}%, ${l}%)`);
   // const material = new THREE.MeshLambertMaterial({ color });
   var baseCakeGeo = new THREE.BoxGeometry(width, heightBase, depth); //Add base for cake mesh
   var baseCakeMat = new THREE.MeshLambertMaterial({ color: 0xab6f23 }); //Add material
@@ -170,7 +178,7 @@ function cake(x, y, z, width, depth) {
   return Cake;
 }
 function generateBox(x, y, z, width, depth, falls) {
-  // ThreeJS
+  // ThreeJS    
   const mesh = cake(x, y, z, width, depth);
   scene.add(mesh);
 
