@@ -145,7 +145,7 @@ function addOverhang(x, z, width, depth) {
 function cake(x, y, z, width, depth) {
   // ThreeJS
   // const geometry = new THREE.BoxGeometry(width, boxHeight, depth);
-  // const color = new THREE.Color(`hsl(${30 + stack.length * 4}, 100%, 50%)`);
+  const color = new THREE.Color(`hsl(${0 + stack.length * 4}, 50%, 50%)`);
   // const material = new THREE.MeshLambertMaterial({ color });
   var baseCakeGeo = new THREE.BoxGeometry(width, heightBase, depth); //Add base for cake mesh
   var baseCakeMat = new THREE.MeshLambertMaterial({ color: 0xab6f23 }); //Add material
@@ -157,7 +157,7 @@ function cake(x, y, z, width, depth) {
   var midLayerCakeMat = new THREE.MeshLambertMaterial({ color: 0xffffff }); //Add material
   var midLayerCake = new THREE.Mesh(midLayerCakeGeo, midLayerCakeMat); //Create Mesh
   midLayerCake.position.y = 0.3; //Postion layer on top of base
-
+  flavourColour = color;
   var topLayerCakeGeo = new THREE.BoxGeometry(width, heightTop, depth); //Add top layer for cake mesh
   var topLayerCakeMat = new THREE.MeshLambertMaterial({ color: flavourColour }); //Add material
   var topLayerCake = new THREE.Mesh(topLayerCakeGeo, topLayerCakeMat); //Create Mesh
