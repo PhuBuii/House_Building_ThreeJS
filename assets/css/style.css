@@ -37,8 +37,25 @@ body:hover #instructions {
 #score {
   position: absolute;
   color: white;
-  font-size: 3em;
+  font-size: 2em;
   font-weight: bold;
   top: 30px;
   right: 30px;
+}
+#highscore {
+  position: relative;
+  color: white;
+  font-size: 1em;
+  font-weight: bold;
+  top: 2px;
+  left: 30px;
+}
+.highscore {
+  position: absolute;
+  display: flex;
+  color: white;
+  font-size: 2em;
+  font-weight: bold;
+  top: 30px;
+  left: 30px;
 }
