@@ -3,7 +3,7 @@
 body {
   margin: 0;
   color: white;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'League Spartan', sans-serif;
   cursor: pointer;
 }
 
@@ -29,10 +29,21 @@ body:hover #instructions {
 
 #results .content,
 #instructions .content {
-  max-width: 300px;
-  padding: 50px;
+  max-width: 500px;
+  padding: 50px 10px;  
   border-radius: 20px;
+  margin-top: 0;
 }
+
+.content h3{
+  margin-top: 5px;
+  text-align: center;
+}
+
+.content h1{
+  margin-bottom: 0;
+}
+
 
 #score {
   position: absolute;
