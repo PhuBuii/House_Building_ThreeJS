@@ -17,9 +17,11 @@ let gameEnded;
 let robotPrecision; // Determines how precise the game is on autopilot
 
 const scoreElement = document.getElementById("score");
+const HighScore = document.getElementById("highscore");
 const instructionsElement = document.getElementById("instructions");
 const resultsElement = document.getElementById("results");
-
+var highscore = 0;
+var score = 0;
 init();
 
 // Determines how precise the game is on autopilot
@@ -101,6 +103,7 @@ function startGame() {
   if (instructionsElement) instructionsElement.style.display = "none";
   if (resultsElement) resultsElement.style.display = "none";
   if (scoreElement) scoreElement.innerText = 0;
+  score = 0;
 
   if (world) {
     // Remove every object from world
@@ -277,7 +280,14 @@ function splitBlockAndAddNextOneIfOverlaps() {
     const newDepth = topLayer.depth; // New layer has the same size as the cut top layer
     const nextDirection = direction == "x" ? "z" : "x";
 
-    if (scoreElement) scoreElement.innerText = stack.length - 1;
+    if (scoreElement) {
+      scoreElement.innerText = stack.length - 1;
+      score = stack.length - 1;
+    }
+    if (score > highscore) {
+      HighScore.innerText = score;
+      highscore = score;
+    }
     addLayer(nextX, nextZ, newWidth, newDepth, nextDirection);
   } else {
     missedTheSpot();
