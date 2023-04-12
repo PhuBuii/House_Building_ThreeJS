@@ -296,7 +296,7 @@ function splitBlockAndAddNextOneIfOverlaps() {
       highscore = score;
     }
 
-    if (score % 1 == 0){
+    if (score % 10 == 0){
       let para = Math.floor(Math.random() * 350);       
       scene.background = new THREE.Color(`hsl( ${para}, 80%, 85%)`)
     }
