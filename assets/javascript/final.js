@@ -151,8 +151,7 @@ function addOverhang(x, z, width, depth) {
 
 function cake(x, y, z, width, depth) {
   // ThreeJS
-  // const geometry = new THREE.BoxGeometry(width, boxHeight, depth);  
-  console.log(s);
+     
   const color = new THREE.Color(`hsl(${h + stack.length * 5}, ${s}%, ${l}%)`);
   // const material = new THREE.MeshLambertMaterial({ color });
   var baseCakeGeo = new THREE.BoxGeometry(width, heightBase, depth); //Add base for cake mesh
