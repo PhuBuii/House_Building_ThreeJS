@@ -8,6 +8,10 @@ let stack; // Parts that stay solid on top of each other
 let overhangs; // Overhanging parts that fall down
 const boxHeight = 1; // Height of each layer
 const originalBoxSize = 3; // Original width and height of a box
+const heightBase = 0.4;
+const heightMiddle = 0.2;
+const heightTop = 0.4;
+var flavourColour = new THREE.Color(0xc22c47);
 let autopilot;
 let gameEnded;
 let robotPrecision; // Determines how precise the game is on autopilot
@@ -107,8 +111,8 @@ function startGame() {
 
   if (scene) {
     // Remove every Mesh from the scene
-    while (scene.children.find((c) => c.type == "Mesh")) {
-      const mesh = scene.children.find((c) => c.type == "Mesh");
+    while (scene.children.find((c) => c.type == "Group")) {
+      const mesh = scene.children.find((c) => c.type == "Group");
       scene.remove(mesh);
     }
 
@@ -138,14 +142,36 @@ function addOverhang(x, z, width, depth) {
   const overhang = generateBox(x, y, z, width, depth, true);
   overhangs.push(overhang);
 }
+function cake(x, y, z, width, depth) {
+  // ThreeJS
+  // const geometry = new THREE.BoxGeometry(width, boxHeight, depth);
+  // const color = new THREE.Color(`hsl(${30 + stack.length * 4}, 100%, 50%)`);
+  // const material = new THREE.MeshLambertMaterial({ color });
+  var baseCakeGeo = new THREE.BoxGeometry(width, heightBase, depth); //Add base for cake mesh
+  var baseCakeMat = new THREE.MeshLambertMaterial({ color: 0xab6f23 }); //Add material
+  var baseCake = new THREE.Mesh(baseCakeGeo, baseCakeMat); //Create Mesh
+  baseCake.castShadow = true; //Cast shadows
+  baseCake.position.y = 0; //Postion base on top of plane
 
+  var midLayerCakeGeo = new THREE.BoxGeometry(width, heightMiddle, depth); //Add middle layer for cake mesh
+  var midLayerCakeMat = new THREE.MeshLambertMaterial({ color: 0xffffff }); //Add material
+  var midLayerCake = new THREE.Mesh(midLayerCakeGeo, midLayerCakeMat); //Create Mesh
+  midLayerCake.position.y = 0.3; //Postion layer on top of base
+
+  var topLayerCakeGeo = new THREE.BoxGeometry(width, heightTop, depth); //Add top layer for cake mesh
+  var topLayerCakeMat = new THREE.MeshLambertMaterial({ color: flavourColour }); //Add material
+  var topLayerCake = new THREE.Mesh(topLayerCakeGeo, topLayerCakeMat); //Create Mesh
+  topLayerCake.receiveShadow = true; //Receive shadows
+  topLayerCake.position.y = 0.6; //Postion layer on top of middle layer
+
+  var Cake = new THREE.Group();
+  Cake.add(baseCake, midLayerCake, topLayerCake);
+  Cake.position.set(x, y, z);
+  return Cake;
+}
 function generateBox(x, y, z, width, depth, falls) {
   // ThreeJS
-  const geometry = new THREE.BoxGeometry(width, boxHeight, depth);
-  const color = new THREE.Color(`hsl(${30 + stack.length * 4}, 100%, 50%)`);
-  const material = new THREE.MeshLambertMaterial({ color });
-  const mesh = new THREE.Mesh(geometry, material);
-  mesh.position.set(x, y, z);
+  const mesh = cake(x, y, z, width, depth);
   scene.add(mesh);
 
   // CannonJS
