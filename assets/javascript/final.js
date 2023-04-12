@@ -65,7 +65,7 @@ function init() {
   camera.lookAt(0, 0, 0);
 
   scene = new THREE.Scene();
-
+  scene.background = new THREE.Color("rgb( 193, 237, 233 )");
   // Foundation
   addLayer(0, 0, originalBoxSize, originalBoxSize);
 
