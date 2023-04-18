@@ -13,10 +13,10 @@ const heightMiddle = 0.2;
 const heightTop = 0.4;
 var flavourColour = new THREE.Color(0xc22c47);
 let autopilot;
+let playtime = 0;
 let gameEnded;
 let robotPrecision; // Determines how precise the game is on autopilot
 let s, l, h;
-
 
 const scoreElement = document.getElementById("score");
 const HighScore = document.getElementById("highscore");
@@ -50,16 +50,15 @@ function init() {
   const width = 10;
   const height = width / aspect;
 
-  camera = new THREE.OrthographicCamera(
-    width / -2, // left
-    width / 2, // right
-    height / 2, // top
-    height / -2, // bottom
-    0, // near plane
-    100 // far plane
-  );
+  // camera = new THREE.OrthographicCamera(
+  //   width / -2, // left
+  //   width / 2, // right
+  //   height / 2, // top
+  //   height / -2, // bottom
+  //   0, // near plane
+  //   100 // far plane
+  // );
 
-  /*
   // If you want to use perspective camera instead, uncomment these lines
   camera = new THREE.PerspectiveCamera(
     45, // field of view
@@ -67,7 +66,6 @@ function init() {
     1, // near plane
     100 // far plane
   );
-  */
 
   camera.position.set(4, 4, 4);
   camera.lookAt(0, 0, 0);
@@ -96,6 +94,11 @@ function init() {
 }
 
 function startGame() {
+  playtime += 1;
+  if (playtime == 1) {
+    highscore = 0;
+    HighScore.innerText = 0;
+  }
   s = Math.floor(Math.random() * 50) + 25;
   l = Math.floor(Math.random() * 50) + 30;
   h = Math.floor(Math.random() * 100) + 1;
@@ -151,10 +154,9 @@ function addOverhang(x, z, width, depth) {
   overhangs.push(overhang);
 }
 
-
 function cake(x, y, z, width, depth) {
   // ThreeJS
-     
+
   const color = new THREE.Color(`hsl(${h + stack.length * 5}, ${s}%, ${l}%)`);
   // const material = new THREE.MeshLambertMaterial({ color });
   var baseCakeGeo = new THREE.BoxGeometry(width, heightBase, depth); //Add base for cake mesh
@@ -180,7 +182,7 @@ function cake(x, y, z, width, depth) {
   return Cake;
 }
 function generateBox(x, y, z, width, depth, falls) {
-  // ThreeJS    
+  // ThreeJS
   const mesh = cake(x, y, z, width, depth);
   scene.add(mesh);
 
@@ -296,9 +298,9 @@ function splitBlockAndAddNextOneIfOverlaps() {
       highscore = score;
     }
 
-    if (score % 10 == 0){
-      let para = Math.floor(Math.random() * 350);       
-      scene.background = new THREE.Color(`hsl( ${para}, 80%, 85%)`)
+    if (score % 10 == 0) {
+      let para = Math.floor(Math.random() * 350);
+      scene.background = new THREE.Color(`hsl( ${para}, 80%, 85%)`);
     }
     addLayer(nextX, nextZ, newWidth, newDepth, nextDirection);
   } else {
