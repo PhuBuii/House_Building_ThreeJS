@@ -299,7 +299,7 @@ function splitBlockAndAddNextOneIfOverlaps() {
     }
 
     if (score % 10 == 0) {
-      let para = Math.floor(Math.random() * 350);
+      let para = Math.floor(Math.random() * 360);
       scene.background = new THREE.Color(`hsl( ${para}, 80%, 85%)`);
     }
     addLayer(nextX, nextZ, newWidth, newDepth, nextDirection);
