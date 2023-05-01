@@ -61,7 +61,7 @@ function init() {
 
   // If you want to use perspective camera instead, uncomment these lines
   camera = new THREE.PerspectiveCamera(
-    45, // field of view
+    60, // field of view
     aspect, // aspect ratio
     1, // near plane
     100 // far plane
