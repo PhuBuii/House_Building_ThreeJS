@@ -36,7 +36,8 @@ body:hover #instructions {
   margin-top: 0;
 }
 
-.content h3 {
+.content h3,
+.content h1 {
   margin-top: 5px;
   text-align: center;
 }
@@ -87,8 +88,7 @@ body:hover #instructions {
     margin-top: 0;
   }
 
-  .content h3,
-  .content h1 {
+  .content h3 {
     margin-top: 5px;
     text-align: center;
   }
