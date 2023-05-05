@@ -15,6 +15,7 @@ body {
 body:hover #instructions {
   position: absolute;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100%;
@@ -113,5 +114,14 @@ body:hover #instructions {
     font-weight: bold;
     top: 30px;
     left: 30px;
+  }
+  #restartButton {
+    display: block;
+    background-color: #f44336; /* Màu nền của button */
+    color: white; /* Màu chữ của button */
+    padding: 10px 20px; /* Khoảng cách giữa nội dung và biên của button */
+    border: none; /* Không có đường viền */
+    border-radius: 5px; /* Bo tròn các góc của button */
+    cursor: pointer; /* Hiển thị con trỏ khi rê chuột vào button */
   }
 }

@@ -22,6 +22,7 @@ const scoreElement = document.getElementById("score");
 const HighScore = document.getElementById("highscore");
 const instructionsElement = document.getElementById("instructions");
 const resultsElement = document.getElementById("results");
+const restartButton = document.getElementById("restartButton");
 var highscore = 0;
 var score = 0;
 init();
@@ -229,6 +230,11 @@ function cutBox(topLayer, overlap, size, delta) {
   topLayer.cannonjs.addShape(shape);
 }
 
+restartButton.addEventListener("click", function (event) {
+  event.preventDefault();
+  startGame();
+  return;
+});
 window.addEventListener("mousedown", eventHandler);
 window.addEventListener("touchstart", eventHandler);
 window.addEventListener("keydown", function (event) {
