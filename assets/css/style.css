@@ -71,7 +71,6 @@ body:hover #instructions {
   left: 30px;
 }
 #restartButton {
-  display: block;
   background-color: #f44336; /* Màu nền của button */
   color: white; /* Màu chữ của button */
   padding: 10px 20px; /* Khoảng cách giữa nội dung và biên của button */
@@ -125,7 +124,6 @@ body:hover #instructions {
     left: 30px;
   }
   #restartButton {
-    display: block;
     background-color: #f44336; /* Màu nền của button */
     color: white; /* Màu chữ của button */
     padding: 10px 20px; /* Khoảng cách giữa nội dung và biên của button */
