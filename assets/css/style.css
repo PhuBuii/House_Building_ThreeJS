@@ -123,12 +123,4 @@ body:hover #instructions {
     top: 30px;
     left: 30px;
   }
-  #restartButton {
-    background-color: #f44336; /* Màu nền của button */
-    color: white; /* Màu chữ của button */
-    padding: 10px 20px; /* Khoảng cách giữa nội dung và biên của button */
-    border: none; /* Không có đường viền */
-    border-radius: 5px; /* Bo tròn các góc của button */
-    cursor: pointer; /* Hiển thị con trỏ khi rê chuột vào button */
-  }
 }
