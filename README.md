@@ -11,7 +11,7 @@
 
 [![Status](https://img.shields.io/badge/status-done-pink?style=flat-square)](https://github.com/pahopu/CS336_ImageSearch_Project2)
 [![GitHub contributors](https://img.shields.io/github/contributors/PhuBuii/House_Building_ThreeJS?style=flat-square)](https://github.com/PhuBuii/House_Building_ThreeJS/graphs/contributors)
-[![Status](https://img.shields.io/badge/language1-python-blue?style=flat-square)](https://github.com/PhuBuii/House_Building_ThreeJS)
+[![Status](https://img.shields.io/badge/language1-javascript-blue?style=flat-square)](https://github.com/PhuBuii/House_Building_ThreeJS)
 [![Status](https://img.shields.io/badge/language2-html-orange?style=flat-square)](https://github.com/PhuBuii/House_Building_ThreeJS)
 [![Status](https://img.shields.io/badge/language3-css-purple?style=flat-square)](https://github.com/PhuBuii/House_Building_ThreeJS)
 
@@ -71,4 +71,3 @@ Vào file `index.html` sau đó ấn nút `go live` ở góc dưới bên phải
 
 ## [DEMO](#top)
 Bạn có thể trải nghiệm thử demo tại [đây](https://phubuii.github.io/House_Building_ThreeJS/).
-**Demo trải nghiệm trên web deploy sẽ không load được texture.**
