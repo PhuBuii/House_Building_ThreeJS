@@ -10,10 +10,10 @@
 <h1 align="center"><b>ĐỒ HỌA MÁY TÍNH (COMPUTER GRAPHIC)</b></h>
 
 [![Status](https://img.shields.io/badge/status-done-pink?style=flat-square)](https://github.com/pahopu/CS336_ImageSearch_Project2)
-[![GitHub contributors](https://img.shields.io/github/contributors/PhuBuii/Crossy_Road_Threejs?style=flat-square)](https://github.com/PhuBuii/Crossy_Road_Threejs/graphs/contributors)
-[![Status](https://img.shields.io/badge/language1-python-blue?style=flat-square)](https://github.com/PhuBuii/Crossy_Road_Threejs)
-[![Status](https://img.shields.io/badge/language2-html-orange?style=flat-square)](https://github.com/PhuBuii/Crossy_Road_Threejs)
-[![Status](https://img.shields.io/badge/language3-css-purple?style=flat-square)](https://github.com/PhuBuii/Crossy_Road_Threejs)
+[![GitHub contributors](https://img.shields.io/github/contributors/PhuBuii/House_Building_ThreeJS?style=flat-square)](https://github.com/PhuBuii/House_Building_ThreeJS/graphs/contributors)
+[![Status](https://img.shields.io/badge/language1-python-blue?style=flat-square)](https://github.com/PhuBuii/House_Building_ThreeJS)
+[![Status](https://img.shields.io/badge/language2-html-orange?style=flat-square)](https://github.com/PhuBuii/House_Building_ThreeJS)
+[![Status](https://img.shields.io/badge/language3-css-purple?style=flat-square)](https://github.com/PhuBuii/House_Building_ThreeJS)
 
 ## [GIỚI THIỆU MÔN HỌC](#top)
 * **Tên môn học:** Đồ họa máy tính - Computer graphic
