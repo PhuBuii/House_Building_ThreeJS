@@ -45,6 +45,7 @@ Nếu bạn dùng điện thoại android
 | Action                      | Command              |
 |-----------------------------|----------------------|
 | <kbd>touch</kbd>            | split box            |
+
 Nếu bạn dùng điện thoại iphone
 | Action                      | Command              |
 |-----------------------------|----------------------|
