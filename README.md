@@ -61,7 +61,7 @@ Clone project repository bằng câu lệnh dưới đây.
 git clone https://github.com/PhuBuii/House_Building_ThreeJS
 ```
 ### 2. Cài đặt Extensions cho Visual Code
-Để chạy được đồ án thì bạn phải cài đặt extensions **Live Server** trong Visual Code
+Để chạy được đồ án thì bạn phải cài đặt extensions **Live Server** trong Visual Code.
 
 ### 3. Mở thư mục chứa đồ án từ Visual Code 
 Để mở thư mục chứa code thì bạn ấn tổ hợp `Ctrl + K CTRL + O` đối với window, còn với mac thì ấn tổ hợp `CTRL + O` sau đó chọn thư mục House_Building_ThreeJS vừa clone về.
